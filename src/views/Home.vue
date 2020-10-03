@@ -1,18 +1,51 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="video">
+      <video src="../assets/homebg.mp4" muted autoplay loop></video>
+      <div class="texts">
+        <h1>Design a better</h1>
+      </div>
+    </div>
+    <div class="cont"></div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
-  name: "Home",
-  components: {
-    HelloWorld
-  }
+  name: "Home"
 };
 </script>
+<style lang="scss" scoped>
+.home {
+  width: 100%;
+  .video {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    .texts {
+      z-index: 99;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+  }
+  .cont {
+    width: 100%;
+  }
+}
+</style>
