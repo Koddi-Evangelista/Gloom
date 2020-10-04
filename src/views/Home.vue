@@ -26,12 +26,12 @@ export default {
   name: "Home",
   data() {
     return {
-      created: false
+      created: false,
     };
   },
   created() {
     this.created = true;
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -41,7 +41,7 @@ export default {
   .video {
     position: relative;
     width: 100%;
-    height: 85vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     padding: 0 1.5rem;
@@ -109,7 +109,7 @@ export default {
     width: 80%;
     height: 40vh;
     position: relative;
-    transform: translateY(-20%);
+    transform: translateY(-25%);
     margin: 0 auto;
     background-color: #f3f3f3;
     padding: 0.5rem;

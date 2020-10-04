@@ -23,7 +23,7 @@ export default {};
   padding: 1rem 0.5rem;
   color: #f1f1f1;
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   #logo {
     font-weight: 700;
     text-transform: capitalize;
