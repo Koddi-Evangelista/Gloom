@@ -1,12 +1,13 @@
 <template>
-  <div class="about">
-    <h1>This is an about page <span>koddi</span></h1>
-  </div>
+  <div class="container"></div>
 </template>
-<style lang="sass" scoped>
-.about
-  h1
-    font-size: 5rem
-  span
-    color: red
+<script>
+export default {
+  components: {}
+};
+</script>
+<style lang="scss" scoped>
+.container {
+  width: 100%;
+}
 </style>

@@ -22,7 +22,7 @@ export default {};
   justify-content: space-between;
   padding: 1rem 0.5rem;
   color: #f1f1f1;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   #logo {
     font-weight: 700;
@@ -33,12 +33,13 @@ export default {};
   }
   nav {
     a {
+      letter-spacing: 0.15rem;
       font-family: "Roboto Condensed", sans-serif;
       padding: 0 0.5rem;
       text-decoration: none;
       color: #f1f1f1;
       &.router-link-exact-active {
-        color: #42b983;
+        color: #fcb9d0;
       }
     }
   }
