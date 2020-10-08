@@ -35,13 +35,40 @@ const routes = [
     name: "Contact",
     component: () =>
       import(/* webpackChunkName: "Contact" */ "@/views/Contact.vue")
+  },
+  {
+    path: "/behavior",
+    name: "Behavior",
+    component: () =>
+      import(/* webpackChunkName: "Behavior" */ "@/views/Behavior.vue")
+  },
+  {
+    path: "/social-anxiety",
+    name: "SocialAnxiety",
+    component: () =>
+      import(
+        /* webpackChunkName: "SocialAnxiety" */ "@/views/SocialAnxiety.vue"
+      )
+  },
+  {
+    path: "/depression",
+    name: "Depression",
+    component: () =>
+      import(/* webpackChunkName: "Depression" */ "@/views/Depression.vue")
   }
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { to: 0, from: 0 };
+    }
+  }
 });
 
 export default router;

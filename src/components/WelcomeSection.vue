@@ -28,6 +28,7 @@
             vitae expedita maxime placeat? Facilis.
           </p>
         </div>
+        <button>get started</button>
       </div>
     </div>
   </div>
@@ -39,8 +40,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .welcome-cont {
-  background-image: url("../assets/texture.jpg");
-  background-size: cover;
+  font-family: "Roboto Condensed", sans-serif;
   padding-bottom: 5rem;
   .cont {
     width: 80%;
@@ -65,6 +65,9 @@ export default {
     height: 100vh;
     padding: 1rem;
     h1 {
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-family: "Homemade Apple", cursive;
       border-bottom: 10px solid #98b8af;
       display: flex;
       justify-content: flex-end;
@@ -79,19 +82,31 @@ export default {
       }
     }
     .intro {
+      height: 100%;
       .texts {
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         width: 65%;
+        text-align: left;
         p {
           letter-spacing: 0.1rem;
-          word-spacing: 0.3rem;
+          word-spacing: 0.2rem;
+          line-height: 1.2rem;
+          &::first-letter {
+            font-weight: 700;
+            font-size: 1.3rem;
+          }
         }
       }
-    }
-    h1 {
-      text-transform: uppercase;
-      font-size: 5rem;
-      font-family: "Roboto Condensed", sans-serif;
+      @media screen and (max-width: 900px) {
+        .texts {
+          width: 100%;
+        }
+      }
+      button {
+        margin: 1rem 0;
+        width: 50%;
+        height: 90px;
+      }
     }
   }
 }

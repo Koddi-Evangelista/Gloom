@@ -1,51 +1,24 @@
 <template>
   <div class="container">
-    <div class="image">
-      <img src="../assets/service.jpg" alt="" />
-    </div>
-    <div class="cto">
-      <h1>Don't Wait to Get the Help You Need</h1>
-      <button>
-        start here
-      </button>
-    </div>
-    <div class="infos">
-      <div class="services">
-        <h1>services</h1>
-        <p>
-          We realize that no two people are the same and as such tailor our
-          therapies to meet the specific needs of our clients. Whether you are
-          struggling with anxiety, depression, or any other issue, we will help
-          you recognize underlying problems, fully realize your strengths and
-          adjust certain behaviors and thoughts to see things a different,
-          healthier way.
-        </p>
-        <p>
-          Our practice specializes in treating individuals, couples, and
-          families and we offer comprehensive services dealing with:
-        </p>
-      </div>
-    </div>
+    <service-header />
+    <service-infos />
   </div>
 </template>
 <script>
+import ServiceInfos from "@/components/ServiceInfos.vue";
+import ServiceHeader from "@/components/ServiceHeader.vue";
 export default {
-  name: "Services"
+  name: "Services",
+  components: {
+    ServiceInfos,
+    ServiceHeader
+  }
 };
 </script>
 <style lang="scss" scoped>
 .container {
   width: 100%;
-  .image {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    margin-bottom: 2rem;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
+  background-color: #faf8f8;
+  color: #496a61;
 }
 </style>

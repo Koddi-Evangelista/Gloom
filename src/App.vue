@@ -8,6 +8,7 @@
       </transition>
       <the-footer />
     </div>
+    <div class="border"></div>
   </div>
 </template>
 <script>
@@ -38,7 +39,12 @@ export default {
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: calc(1em + 1vw);
+}
 #app {
+  background-color: #222;
+  padding: 1rem;
   max-width: 1980px;
   margin: 0 auto;
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -46,6 +52,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  overflow: hidden;
   #nav {
     z-index: 99;
   }
@@ -54,13 +61,26 @@ export default {
     height: 100vh;
     background-color: #222;
   }
+  .border {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    background-color: #222;
+    z-index: 9;
+  }
 }
 .slide-enter-active,
 .slide-leave-active {
-  transition: 0.3s;
+  transition: 0.5s;
 }
-.slide-enter,
+.slide-enter {
+  opacity: 0;
+  transform: translateY(-50%);
+}
 .slide-leave-to {
   opacity: 0;
+  transform: translateX(50%);
 }
 </style>

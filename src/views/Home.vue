@@ -33,7 +33,7 @@ export default {
 .home {
   width: 100%;
   height: auto;
-  background-color: #ffe9ec;
+  background-color: #faf8f8;
   color: #496a61;
 }
 </style>

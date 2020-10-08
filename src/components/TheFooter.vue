@@ -11,8 +11,8 @@
         <h1>Gloom</h1>
         <p>Registered Mental Health Company</p>
         <p>IMH 18395</p>
-        <p>Certified Yoga Teacher</p>
-        <p>Certified Life Coach</p>
+        <p>Certified Yoga Teachers</p>
+        <p>Certified Life Coaches</p>
       </div>
       <div class="social-medias">
         <a href="#">
@@ -47,6 +47,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    p {
+      font-size: 0.8rem;
+    }
   }
   .infos {
     width: 100%;
@@ -59,6 +62,15 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        margin: 0.5rem 0;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+      }
     }
     .social-medias {
       width: 50%;
@@ -68,6 +80,20 @@
       align-items: center;
     }
   }
+  @media screen and (max-width: 900px) {
+    .infos {
+      padding-top: 2rem;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  .social-medias {
+    a {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
   .extra {
     width: 100%;
     height: 10%;
@@ -75,7 +101,11 @@
     justify-content: center;
     align-items: center;
     p {
+      font-size: 0.8rem;
       margin-left: 1rem;
+    }
+    a {
+      font-size: 0.8rem;
     }
   }
 }

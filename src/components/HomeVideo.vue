@@ -32,14 +32,13 @@ export default {
     color: #ffe9ec;
     text-align: left;
     z-index: 2;
-    line-height: 8rem;
     h1 {
-      font-size: 3rem;
+      font-size: 1.2rem;
       letter-spacing: 0.5rem;
     }
     .arrow-box {
       position: absolute;
-      bottom: -30%;
+      bottom: -100px;
       left: 65%;
       span {
         display: block;
@@ -61,6 +60,16 @@ export default {
         }
         &:nth-child(4) {
           animation-delay: 0.8s;
+        }
+      }
+    }
+    @media screen and (max-width: 900px) {
+      .arrow-box {
+        left: 20%;
+        bottom: -60px;
+        span {
+          width: 35px;
+          height: 35px;
         }
       }
     }
